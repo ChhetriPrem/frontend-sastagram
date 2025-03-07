@@ -13,17 +13,17 @@ function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    axios
-      .get("https://sociopath-git-main-chhetriprems-projects.vercel.app/auth/check", { withCredentials: true })
-      .then((res) => {
-        if (res.data.authenticated) {
-          setUser(res.data.user);
-        }
-      })
-      .catch(() => setUser(null))
-      .finally(() => setLoading(false));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://sociopath-git-main-chhetriprems-projects.vercel.app/auth/check", { withCredentials: true })
+  //     .then((res) => {
+  //       if (res.data.authenticated) {
+  //         setUser(res.data.user);
+  //       }
+  //     })
+  //     .catch(() => setUser(null))
+  //     .finally(() => setLoading(false));
+  // }, []);
 
   if (loading) return <p>Loading...</p>;
 
