@@ -12,7 +12,7 @@ const Home = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get("https://sociopath-git-main-chhetriprems-projects.vercel.app/user/data");
+      const response = await axios.get("https://sociopath-z47y.onrender.com/user/data");
       setPosts(response.data);
     } catch (error) {
       console.error("Error fetching posts:", error);
@@ -22,7 +22,7 @@ const Home = () => {
   const likePost = async (postId) => {
     try {
       await axios.post(
-        `https://sociopath-git-main-chhetriprems-projects.vercel.app/user/${postId}/like`,
+        `https://sociopath-z47y.onrender.com/user/${postId}/like`,
         {}, // Empty body (if no extra data is needed)
         { withCredentials: true } // Move withCredentials to config
       );
@@ -35,7 +35,7 @@ const Home = () => {
   const addComment = async (postId, commentText, setCommentText) => {
     try {
       const response = await fetch(
-        `https://sociopath-git-main-chhetriprems-projects.vercel.app/user/${postId}/comment`,
+        `https://sociopath-z47y.onrender.com/user/${postId}/comment`,
         {
           method: "POST",
           headers: {
