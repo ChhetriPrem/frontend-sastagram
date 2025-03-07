@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://sociopath-git-main-chhetriprems-projects.vercel.app/auth/check", { withCredentials: true })
+      .get("https://sociopath-z47y.onrender.com/auth/check", { withCredentials: true })
       .then((res) => {
         if (res.data.authenticated) {
           setUser(res.data.user);
