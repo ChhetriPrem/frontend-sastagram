@@ -21,9 +21,9 @@ const AuthForm = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await axios.get("https://sociopath-git-main-chhetriprems-projects.vercel.app/auth/check", {
-          withCredentials: true, // Ensures cookies are sent
-        });
+        // const res = await axios.get("https://sociopath-git-main-chhetriprems-projects.vercel.app/auth/check", {
+        //   withCredentials: true, // Ensures cookies are sent
+        // });
 
         if (res.data.authenticated) {
           navigate("/"); // Redirect to home if logged in
