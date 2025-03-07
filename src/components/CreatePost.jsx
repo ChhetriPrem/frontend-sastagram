@@ -15,7 +15,7 @@ const CreatePost = ({ fetchPosts }) => {
     const fetchUser = async () => {
       try {
         const response = await axios.post(
-          "https://sociopath-git-main-chhetriprems-projects.vercel.app/user/profile",
+          "https://sociopath-z47y.onrender.com/user/profile",
           {},
           { withCredentials: true }
         );
@@ -49,7 +49,7 @@ const CreatePost = ({ fetchPosts }) => {
 
       // Upload image first
       const uploadResponse = await axios.post(
-        "https://sociopath-git-main-chhetriprems-projects.vercel.app/user/upload",
+        "https://sociopath-z47y.onrender.com/user/upload",
         formData
       );
 
@@ -60,7 +60,7 @@ const CreatePost = ({ fetchPosts }) => {
       // Create post with uploaded image URL
 
       await axios.post(
-        "https://sociopath-git-main-chhetriprems-projects.vercel.app/user/createPost",
+        "https://sociopath-z47y.onrender.com/user/createPost",
         {
           title,
           img: uploadResponse.data.imageUrl,
