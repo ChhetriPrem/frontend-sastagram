@@ -13,17 +13,22 @@ function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    axios
-      .get("https://sociopath-z47y.onrender.com/auth/check", { withCredentials: true })
-      .then((res) => {
-        if (res.data.authenticated) {
-          setUser(res.data.user);
-        }
-      })
-      .catch(() => setUser(null))
-      .finally(() => setLoading(false));
-  }, []);
+useEffect(() => {
+  axios
+    .get("https://sociopath-z47y.onrender.com/auth/check", { withCredentials: true })
+    .then((res) => {
+      console.log(res.data); // Log the response to check the authenticated status
+      if (res.data.authenticated) {
+        setUser(res.data.user);
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error); // Log the error for more insights
+      setUser(null);
+    })
+    .finally(() => setLoading(false));
+}, []);
+
 
   if (loading) return <p>Loading...</p>;
 
