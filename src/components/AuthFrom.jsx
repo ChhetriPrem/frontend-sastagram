@@ -21,7 +21,7 @@ const AuthForm = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await axios.get("https://sociopath-git-main-chhetriprems-projects.vercel.app/auth/check", {
+        const res = await axios.get("https://sociopath-z47y.onrender.com/auth/check", {
           withCredentials: true, // Ensures cookies are sent
         });
 
@@ -48,8 +48,8 @@ const AuthForm = () => {
     setMessage("");
 
     const endpoint = isLogin
-      ? "https://sociopath-git-main-chhetriprems-projects.vercel.app/auth/login"
-      : "https://sociopath-git-main-chhetriprems-projects.vercel.app/auth/signup";
+      ? "https://sociopath-z47y.onrender.com/auth/login"
+      : "https://sociopath-z47y.onrender.com/auth/signup";
 
     try {
       await axios.post(endpoint, formData, {
