@@ -11,7 +11,7 @@ import AuthForm from "./components/AuthFrom";
 
 function App() {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   // useEffect(() => {
   //   axios
